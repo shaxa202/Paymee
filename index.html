@@ -1,0 +1,2205 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      user-scalable=no">
+
+<meta name="theme-color" content="#080509">
+
+<title>Для Шани ❤️</title>
+
+<style>
+
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: #070509;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   BACKGROUND
+================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -10;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255, 65, 130, .15),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(130, 30, 130, .12),
+            transparent 35%
+        ),
+
+        #070509;
+}
+
+
+.glow {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: .16;
+
+    animation:
+        glowMove 12s ease-in-out infinite alternate;
+}
+
+
+.glow1 {
+    background: #ff397f;
+
+    top: -230px;
+    left: -180px;
+}
+
+
+.glow2 {
+    background: #8c2fff;
+
+    right: -230px;
+    bottom: -220px;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes glowMove {
+
+    0% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translate(110px,80px)
+            scale(1.25);
+    }
+
+}
+
+
+/* =================================
+   PARTICLES
+================================= */
+
+.particles {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+.particle {
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.7);
+
+    animation:
+        particleFloat linear infinite;
+}
+
+
+@keyframes particleFloat {
+
+    from {
+        transform:
+            translateY(100vh);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(-10vh);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =================================
+   SCREENS
+================================= */
+
+.screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    padding:
+        25px 20px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        scale(1.04);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        visibility .8s;
+}
+
+
+.screen.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        scale(1);
+}
+
+
+/* =================================
+   INTRO
+================================= */
+
+.intro {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    text-align: center;
+}
+
+
+.label {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #bdaab5;
+
+    margin-bottom: 22px;
+
+    animation:
+        fadeUp 1s ease both;
+}
+
+
+.intro h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(42px, 10vw, 80px);
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+
+    animation:
+        fadeUp 1s .15s ease both;
+}
+
+
+.pink {
+
+    color: #ff709f;
+
+    text-shadow:
+        0 0 35px
+        rgba(255,80,140,.35);
+}
+
+
+.intro p {
+
+    color: #bdb0b8;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+    animation:
+        fadeUp 1s .3s ease both;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.btn {
+
+    min-height: 53px;
+
+    padding:
+        15px 29px;
+
+    border-radius:
+        100px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    background:
+        rgba(255,255,255,.055);
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    backdrop-filter:
+        blur(15px);
+
+    transition:
+        .3s ease;
+}
+
+
+.btn:hover {
+
+    background:
+        rgba(255,70,130,.16);
+
+    box-shadow:
+        0 10px 45px
+        rgba(255,60,130,.2);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.btn:active {
+
+    transform:
+        scale(.93);
+}
+
+
+/* =================================
+   STORY
+================================= */
+
+.story {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    text-align: center;
+}
+
+
+.storyText {
+
+    min-height: 190px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(27px, 7vw, 58px);
+
+    line-height: 1.35;
+
+    text-shadow:
+        0 0 35px
+        rgba(255,255,255,.08);
+}
+
+
+.cursor {
+
+    width: 2px;
+
+    height: 38px;
+
+    background:
+        #ff719f;
+
+    margin-left: 5px;
+
+    animation:
+        blink .8s infinite;
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =================================
+   GAME
+================================= */
+
+.game {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    text-align: center;
+}
+
+
+.game h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(32px, 8vw, 52px);
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+
+.game > p {
+
+    color: #bdb0b8;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.heartArea {
+
+    position: relative;
+
+    width: 100%;
+
+    height:
+        min(320px, 48vh);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 0 70px
+        rgba(255,50,120,.035);
+}
+
+
+.heart {
+
+    position: absolute;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.heart:active {
+
+    transform:
+        scale(.7);
+}
+
+
+.realHeart {
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.25);
+    }
+
+}
+
+
+.gameMessage {
+
+    height: 35px;
+
+    margin-top: 14px;
+
+    color:
+        #ff83aa;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   LETTER
+================================= */
+
+.letter {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    text-align: center;
+}
+
+
+.letterCard {
+
+    width: 100%;
+
+    padding:
+        clamp(28px, 7vw, 60px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.35);
+
+    animation:
+        cardAppear .9s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+.letterCard h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(34px, 8vw, 58px);
+
+    font-weight: 400;
+
+    margin-bottom: 28px;
+}
+
+
+.letterCard p {
+
+    color:
+        #c4b8c0;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 14px;
+
+    opacity: 0;
+
+    animation:
+        textAppear .8s ease forwards;
+}
+
+
+.letterCard p:nth-of-type(1) {
+    animation-delay: .3s;
+}
+
+.letterCard p:nth-of-type(2) {
+    animation-delay: .6s;
+}
+
+.letterCard p:nth-of-type(3) {
+    animation-delay: .9s;
+}
+
+
+@keyframes textAppear {
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+.signature {
+
+    margin-top: 28px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    color:
+        #ff729f;
+
+    font-size: 22px;
+
+    animation:
+        signatureGlow 2s infinite alternate;
+}
+
+
+@keyframes signatureGlow {
+
+    from {
+        text-shadow:
+            0 0 5px
+            rgba(255,80,140,.1);
+    }
+
+    to {
+        text-shadow:
+            0 0 25px
+            rgba(255,80,140,.5);
+    }
+
+}
+
+
+/* =================================
+   FINAL
+================================= */
+
+.final {
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.finalLabel {
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color:
+        #b9aab4;
+
+    margin-bottom: 25px;
+
+    animation:
+        fadeUp 1s ease;
+}
+
+
+.final h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(38px, 10vw, 85px);
+
+    line-height: 1.2;
+
+    color:
+        #ff709f;
+
+    text-shadow:
+        0 0 35px
+        rgba(255,70,140,.3);
+
+    animation:
+        finalGlow 2s
+        ease-in-out
+        infinite alternate;
+}
+
+
+@keyframes finalGlow {
+
+    from {
+
+        transform:
+            scale(1);
+
+        text-shadow:
+            0 0 20px
+            rgba(255,70,140,.15);
+
+    }
+
+    to {
+
+        transform:
+            scale(1.025);
+
+        text-shadow:
+            0 0 65px
+            rgba(255,70,140,.55);
+
+    }
+
+}
+
+
+.final p {
+
+    margin-top: 30px;
+
+    color:
+        #c4b7bf;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    animation:
+        fadeUp 1s .5s both;
+}
+
+
+
+
+.floatingHeart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events:
+        none;
+
+    z-index: 30;
+
+    animation:
+        floatUp
+        linear
+        forwards;
+}
+
+
+@keyframes floatUp {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            rotate(0)
+            scale(.6);
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-115vh)
+            rotate(360deg)
+            scale(1.2);
+
+    }
+
+}
+
+
+
+
+.spark {
+
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    pointer-events: none;
+
+    animation:
+        sparkAnimation 1.2s ease-out forwards;
+
+    z-index: 40;
+}
+
+
+@keyframes sparkAnimation {
+
+    from {
+
+        opacity: 1;
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(0);
+
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .screen {
+
+        padding:
+            20px 17px;
+    }
+
+    .intro h1 {
+
+        font-size:
+            clamp(40px, 12vw, 58px);
+
+    }
+
+    .intro p {
+
+        font-size: 14px;
+
+    }
+
+    .btn {
+
+        min-width:
+            175px;
+
+    }
+
+    .storyText {
+
+        min-height: 190px;
+
+        font-size:
+            clamp(27px, 8vw, 43px);
+
+    }
+
+    .heartArea {
+
+        height: 275px;
+
+        border-radius:
+            22px;
+
+    }
+
+    .letterCard {
+
+        padding:
+            30px 21px;
+
+        max-height:
+            80vh;
+
+        overflow-y:
+            auto;
+
+    }
+
+    .letterCard h2 {
+
+        font-size: 34px;
+
+    }
+
+    .letterCard p {
+
+        font-size: 13px;
+
+        line-height:
+            1.8;
+
+    }
+
+    .signature {
+
+        font-size: 20px;
+
+    }
+
+    .final h1 {
+
+        font-size:
+            clamp(40px, 12vw, 65px);
+
+    }
+
+}
+
+
+
+
+@media (max-height: 650px) {
+
+    .intro h1 {
+
+        font-size: 37px;
+
+        margin-bottom: 14px;
+
+    }
+
+    .intro p {
+
+        margin-bottom: 20px;
+
+    }
+
+    .storyText {
+
+        min-height:
+            140px;
+
+        font-size:
+            27px;
+
+    }
+
+    .heartArea {
+
+        height:
+            215px;
+
+    }
+
+    .letterCard {
+
+        padding:
+            22px 18px;
+
+    }
+
+    .letterCard h2 {
+
+        font-size:
+            29px;
+
+        margin-bottom:
+            17px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+
+<div class="background">
+
+    <div class="glow glow1"></div>
+
+    <div class="glow glow2"></div>
+
+</div>
+
+
+<div
+    class="particles"
+    id="particles">
+</div>
+
+
+
+
+<section
+    class="screen active"
+    id="screen1">
+
+    <div class="intro">
+
+        <div class="label">
+
+            special message
+
+        </div>
+
+
+        <h1>
+
+            Для одной<br>
+
+            <span class="pink">
+                особенной
+            </span>
+
+            девушки ❤️
+
+        </h1>
+
+
+        <p>
+
+            Я мог просто написать тебе сообщение...
+
+            <br>
+
+            Но решил сделать кое-что другое.
+
+        </p>
+
+
+        <button
+            class="btn"
+            onclick="openSite()">
+
+            Открыть ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     SCREEN 2
+================================= -->
+
+<section
+    class="screen"
+    id="screen2">
+
+    <div class="story">
+
+        <div
+            class="storyText"
+            id="storyText">
+        </div>
+
+
+        <button
+            class="btn"
+            id="storyBtn"
+            onclick="nextScreen(3)"
+            style="
+                opacity:0;
+                pointer-events:none;
+            ">
+
+            Дальше →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     SCREEN 3
+================================= -->
+
+<section
+    class="screen"
+    id="screen3">
+
+    <div class="game">
+
+        <h2>
+            Маленькая игра ❤️
+        </h2>
+
+
+        <p>
+
+            Найди настоящее сердечко.
+
+            <br>
+
+            Только одно из них настоящее...
+
+        </p>
+
+
+        <div
+            class="heartArea"
+            id="heartArea">
+        </div>
+
+
+        <div
+            class="gameMessage"
+            id="gameMessage">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     SCREEN 4
+================================= -->
+
+<section
+    class="screen"
+    id="screen4">
+
+    <div class="letter">
+
+        <div class="letterCard">
+
+            <h2>
+                А теперь...
+            </h2>
+
+
+            <p>
+
+                Я просто хотел сделать
+                тебе одну маленькую улыбку.
+
+            </p>
+
+
+            <p>
+
+                Не знаю, получилось ли у меня...
+
+                Но если ты сейчас улыбаешься —
+                значит, всё было не зря. ❤️
+
+            </p>
+
+
+            <p>
+
+                Мне не нужен особый повод,
+                чтобы сделать тебе что-нибудь приятное.
+
+                Просто потому что ты есть.
+
+            </p>
+
+
+            <div class="signature">
+
+                ❤️ Для тебя, Шаня
+
+            </div>
+
+
+            <button
+                class="btn"
+                onclick="nextScreen(5)"
+                style="margin-top:30px;">
+
+                Ещё кое-что...
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     SCREEN 5
+================================= -->
+
+<section
+    class="screen"
+    id="screen5">
+
+    <div class="final">
+
+        <div class="finalLabel">
+
+            ШАНЯ
+
+        </div>
+
+
+        <h1>
+
+            Спасибо<br>
+
+            за то, что<br>
+
+            ты есть ❤️
+
+        </h1>
+
+
+        <p>
+
+            Иногда человеку не нужно
+            ничего особенного.
+
+            <br>
+
+            Достаточно просто знать,
+            что ты есть.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* ==========================================
+   SCREEN SYSTEM
+========================================== */
+
+let currentScreen = 1;
+
+
+function nextScreen(number) {
+
+    const oldScreen =
+        document.getElementById(
+            `screen${currentScreen}`
+        );
+
+
+    const newScreen =
+        document.getElementById(
+            `screen${number}`
+        );
+
+
+    oldScreen.classList.remove(
+        'active'
+    );
+
+
+    currentScreen = number;
+
+
+    setTimeout(() => {
+
+        newScreen.classList.add(
+            'active'
+        );
+
+    }, 100);
+
+
+    if (number === 2) {
+
+        startStory();
+
+    }
+
+
+    if (number === 3) {
+
+        createGame();
+
+    }
+
+
+    if (number === 5) {
+
+        finalAnimation();
+
+    }
+
+}
+
+
+/* ==========================================
+   OPEN
+========================================== */
+
+function openSite() {
+
+    startMusic();
+
+    createHearts(18);
+
+    createSparkBurst(
+        window.innerWidth / 2,
+        window.innerHeight / 2
+    );
+
+    nextScreen(2);
+
+}
+
+
+/* ==========================================
+   STORY
+========================================== */
+
+const storyLines = [
+
+    "Я долго думал, как сделать тебе что-нибудь особенное...",
+
+    "И понял одну простую вещь.",
+
+    "Мне не нужен повод, чтобы порадовать тебя.",
+
+    "Я просто хотел сделать тебе одну маленькую улыбку. ❤️",
+
+    "Даже если она продлится всего несколько секунд...",
+
+    "Для меня этого уже достаточно.",
+
+    "Поэтому этот маленький мир — только для тебя."
+
+];
+
+
+let storyIndex = 0;
+
+
+function startStory() {
+
+    storyIndex = 0;
+
+
+    const text =
+        document.getElementById(
+            'storyText'
+        );
+
+
+    const button =
+        document.getElementById(
+            'storyBtn'
+        );
+
+
+    text.innerHTML = '';
+
+
+    button.style.opacity = '0';
+
+    button.style.pointerEvents =
+        'none';
+
+
+    typeLine();
+
+}
+
+
+function typeLine() {
+
+    const text =
+        document.getElementById(
+            'storyText'
+        );
+
+
+    if (
+        storyIndex >=
+        storyLines.length
+    ) {
+
+        const button =
+            document.getElementById(
+                'storyBtn'
+            );
+
+
+        button.style.opacity = '1';
+
+        button.style.pointerEvents =
+            'auto';
+
+
+        createHearts(10);
+
+        return;
+
+    }
+
+
+    const line =
+        storyLines[
+            storyIndex
+        ];
+
+
+    let charIndex = 0;
+
+
+    text.innerHTML =
+        '<span></span><span class="cursor"></span>';
+
+
+    const span =
+        text.querySelector(
+            'span'
+        );
+
+
+    const typing =
+        setInterval(() => {
+
+            span.textContent +=
+                line[charIndex];
+
+
+            charIndex++;
+
+
+            if (
+                charIndex >=
+                line.length
+            ) {
+
+                clearInterval(
+                    typing
+                );
+
+
+                setTimeout(() => {
+
+                    storyIndex++;
+
+                    typeLine();
+
+                }, 1000);
+
+            }
+
+        }, 40);
+
+}
+
+
+/* ==========================================
+   GAME
+========================================== */
+
+function createGame() {
+
+    const area =
+        document.getElementById(
+            'heartArea'
+        );
+
+
+    const message =
+        document.getElementById(
+            'gameMessage'
+        );
+
+
+    area.innerHTML = '';
+
+    message.textContent = '';
+
+
+    /* REAL HEART */
+
+    const real =
+        document.createElement(
+            'div'
+        );
+
+
+    real.className =
+        'heart realHeart';
+
+
+    real.textContent =
+        '❤️';
+
+
+    real.style.left =
+        `${Math.random() * 78 + 5}%`;
+
+
+    real.style.top =
+        `${Math.random() * 65 + 5}%`;
+
+
+    real.onclick = () => {
+
+        message.textContent =
+            'Ты нашла его 🥹❤️';
+
+
+        createHearts(35);
+
+
+        createSparkBurst(
+            window.innerWidth / 2,
+            window.innerHeight / 2
+        );
+
+
+        setTimeout(() => {
+
+            nextScreen(4);
+
+        }, 1700);
+
+    };
+
+
+    area.appendChild(
+        real
+    );
+
+
+    /* FAKE HEARTS */
+
+    const emojis = [
+
+        '🩷',
+        '💗',
+        '💖',
+        '💕',
+        '💓',
+        '💞',
+        '✨'
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < 8;
+        i++
+    ) {
+
+        const fake =
+            document.createElement(
+                'div'
+            );
+
+
+        fake.className =
+            'heart';
+
+
+        fake.textContent =
+            emojis[
+                Math.floor(
+                    Math.random()
+                    *
+                    emojis.length
+                )
+            ];
+
+
+        fake.style.left =
+            `${Math.random() * 82 + 2}%`;
+
+
+        fake.style.top =
+            `${Math.random() * 72 + 2}%`;
+
+
+        fake.onclick = () => {
+
+            message.textContent =
+                'Не это 😭 Попробуй ещё...';
+
+
+            fake.style.transform =
+                'scale(.5)';
+
+
+            setTimeout(() => {
+
+                fake.style.transform =
+                    '';
+
+            }, 250);
+
+        };
+
+
+        area.appendChild(
+            fake
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   FLOATING HEART
+========================================== */
+
+function createHeart() {
+
+    const heart =
+        document.createElement(
+            'div'
+        );
+
+
+    heart.className =
+        'floatingHeart';
+
+
+    const hearts = [
+
+        '❤️',
+        '🩷',
+        '💗',
+        '💖',
+        '💕',
+        '✨',
+        '♡'
+
+    ];
+
+
+    heart.textContent =
+        hearts[
+            Math.floor(
+                Math.random()
+                *
+                hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        `${Math.random() * 100}vw`;
+
+
+    heart.style.fontSize =
+        `${12 + Math.random() * 20}px`;
+
+
+    heart.style.animationDuration =
+        `${5 + Math.random() * 5}s`;
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 11000);
+
+}
+
+
+setInterval(
+    createHeart,
+    1300
+);
+
+
+/* ==========================================
+   SPARK BURST
+========================================== */
+
+function createSparkBurst(
+    x,
+    y
+) {
+
+    for (
+        let i = 0;
+        i < 35;
+        i++
+    ) {
+
+        const spark =
+            document.createElement(
+                'div'
+            );
+
+
+        spark.className =
+            'spark';
+
+
+        spark.style.left =
+            `${x}px`;
+
+
+        spark.style.top =
+            `${y}px`;
+
+
+        const angle =
+            Math.random()
+            *
+            Math.PI
+            *
+            2;
+
+
+        const distance =
+            50 +
+            Math.random()
+            * 180;
+
+
+        spark.style.setProperty(
+            '--x',
+            `${Math.cos(angle) * distance}px`
+        );
+
+
+        spark.style.setProperty(
+            '--y',
+            `${Math.sin(angle) * distance}px`
+        );
+
+
+        document.body.appendChild(
+            spark
+        );
+
+
+        setTimeout(() => {
+
+            spark.remove();
+
+        }, 1300);
+
+    }
+
+}
+
+
+/* ==========================================
+   MANY HEARTS
+========================================== */
+
+function createHearts(
+    count
+) {
+
+    for (
+        let i = 0;
+        i < count;
+        i++
+    ) {
+
+        setTimeout(() => {
+
+            createHeart();
+
+        }, i * 45);
+
+    }
+
+}
+
+
+/* ==========================================
+   FINAL
+========================================== */
+
+function finalAnimation() {
+
+    createHearts(100);
+
+
+    setTimeout(() => {
+
+        createHearts(70);
+
+    }, 1200);
+
+
+    setTimeout(() => {
+
+        createHearts(50);
+
+    }, 2600);
+
+
+    setTimeout(() => {
+
+        createSparkBurst(
+            window.innerWidth / 2,
+            window.innerHeight / 2
+        );
+
+    }, 700);
+
+}
+
+
+/* ==========================================
+   PARTICLES
+========================================== */
+
+const particleContainer =
+    document.getElementById(
+        'particles'
+    );
+
+
+for (
+    let i = 0;
+    i < 40;
+    i++
+) {
+
+    const particle =
+        document.createElement(
+            'div'
+        );
+
+
+    particle.className =
+        'particle';
+
+
+    particle.style.left =
+        `${Math.random() * 100}%`;
+
+
+    particle.style.animationDuration =
+        `${7 + Math.random() * 10}s`;
+
+
+    particle.style.animationDelay =
+        `${Math.random() * 8}s`;
+
+
+    particleContainer.appendChild(
+        particle
+    );
+
+}
+
+
+/* ==========================================
+   MUSIC
+========================================== */
+
+/*
+   Музыка запускается после первого
+   нажатия "Открыть ❤️".
+
+   Отдельный mp3 не нужен.
+*/
+
+let audioContext = null;
+
+let masterGain = null;
+
+let musicPlaying = false;
+
+let musicTimer = null;
+
+
+function startMusic() {
+
+    if (musicPlaying) {
+        return;
+    }
+
+
+    try {
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+
+        masterGain =
+            audioContext.createGain();
+
+
+        masterGain.gain.value =
+            0.035;
+
+
+        masterGain.connect(
+            audioContext.destination
+        );
+
+
+        musicPlaying = true;
+
+
+        playMelody();
+
+    }
+
+    catch (error) {
+
+        console.log(
+            'Music unavailable'
+        );
+
+    }
+
+}
+
+
+function playTone(
+    frequency,
+    duration,
+    delay = 0
+) {
+
+    if (
+        !audioContext ||
+        !masterGain
+    ) {
+        return;
+    }
+
+
+    const oscillator =
+        audioContext.createOscillator();
+
+
+    const gain =
+        audioContext.createGain();
+
+
+    oscillator.type =
+        'sine';
+
+
+    oscillator.frequency.value =
+        frequency;
+
+
+    gain.gain.setValueAtTime(
+        0,
+        audioContext.currentTime
+        + delay
+    );
+
+
+    gain.gain.linearRampToValueAtTime(
+        0.8,
+        audioContext.currentTime
+        + delay
+        + .05
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        .001,
+        audioContext.currentTime
+        + delay
+        + duration
+    );
+
+
+    oscillator.connect(
+        gain
+    );
+
+
+    gain.connect(
+        masterGain
+    );
+
+
+    oscillator.start(
+        audioContext.currentTime
+        + delay
+    );
+
+
+    oscillator.stop(
+        audioContext.currentTime
+        + delay
+        + duration
+        + .05
+    );
+
+}
+
+
+function playMelody() {
+
+    if (!musicPlaying) {
+        return;
+    }
+
+
+    const melody = [
+
+        261.63,
+        329.63,
+        392.00,
+        329.63,
+
+        293.66,
+        349.23,
+        440.00,
+        349.23,
+
+        261.63,
+        329.63,
+        392.00,
+        523.25,
+
+        392.00,
+        329.63,
+        293.66,
+        261.63
+
+    ];
+
+
+    melody.forEach(
+        (note, index) => {
+
+            playTone(
+                note,
+                1.8,
+                index * .45
+            );
+
+        }
+    );
+
+
+    musicTimer =
+        setTimeout(
+            playMelody,
+            melody.length
+            * 450
+            + 1000
+        );
+
+}
+
+
+/* ==========================================
+   START
+========================================== */
+
+for (
+    let i = 0;
+    i < 8;
+    i++
+) {
+
+    setTimeout(
+        createHeart,
+        i * 500
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>
+
